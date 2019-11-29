@@ -19,10 +19,8 @@
     "unique",
     "id",
     "reference",
-    "code",
-    "reference",
-    "id",
-    "reference"
+    "api key",
+    "api"
   ],
   "author": "Oluwatosin Gbenga",
   "license": "MIT",
