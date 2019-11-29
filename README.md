@@ -36,13 +36,19 @@ console.log(random_numeric)
 //Returns 4836593648
 
 #RandomAlphaNum
-This method takes only one parameter which is an integer value which specifies the length of the expected alpha numeric string i.e the returns a random value that contains integers and string(lowercase and upperercase)
+This method takes only one parameter which is an integer value which specifies the length of the expected alpha numeric string i.e the returns a random value that contains integers and strings(lowercase and upperercase)
 
-var random_alphanumeric = unique_id.RandomAlphaNum(10)
-console.log(random_numeric)
+var random_alphanum = unique_id.RandomAlphaNum(10)
+console.log(random_alphanum)
+#Returns gp2WfI7ihd
 
 #APIKEY
 This method takes at least two parameters, an integer value which specifies the length of the expected api key.It takes a second parameter which is the special character you want in the API.This is placed after every 4th character in the API KEY string.
 
-var random_alphanumeric = unique_id.APIKEY(16,"-")
-console.log(random_numeric)
+var api_keys= unique_id.APIKEY(16,"-")
+console.log(api_keys)
+#Returns 5TZS-JLG3-325O-1S5B
+
+var api_keys= unique_id.APIKEY(12,".")
+console.log(api_keys)
+#Returns 5hQw.tQ1l.yqgH
