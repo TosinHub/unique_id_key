@@ -1,9 +1,6 @@
-# unique- string
-A module that returns strings which could be all numeric or all charater or alpha numberic. It can also generate random API keys seperated by "-" at every 4th character
-Random Character   ${random.RandomString(10,"lowercase")} <br>
-                ${random.RandomNum(6)} <br>
-                ${random.AlphaNum(10)} <br>
-                ${random.APIKEY(16)}`
+# unique-id-key
+A module that returns unique random characters which could be all be numeric or all string or alpha numberic. It can also generate random API keys seperated by any special charater of your choice at every 4th character
+
 
 ## HOW TO INSTALL
 # npm install unique-id-key --save
@@ -11,10 +8,7 @@ Random Character   ${random.RandomString(10,"lowercase")} <br>
 var unique_id = require('unique-id-key')
 
 ```javascript
-Random Character poeynlyruu
-762916
-BHBlg2pM7M
-5TZS-JLG3-325O-1S5Bb
+
 ## METHODS 
 
 #RandomString Method
