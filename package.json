@@ -1,0 +1,33 @@
+{
+  "name": "unique-id-key",
+  "version": "0.10.0",
+  "description": "A module that returns random strings and API keys",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TosinHub/unique_id_key.git"
+  },
+  "keywords": [
+    "string",
+    "random",
+    "id",
+    "characters",
+    "key",
+    "unique",
+    "id",
+    "reference",
+    "code",
+    "reference",
+    "id",
+    "reference"
+  ],
+  "author": "Oluwatosin Gbenga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TosinHub/unique_id_key/issues"
+  },
+  "homepage": "https://github.com/TosinHub/unique_id_key#readme"
+}
