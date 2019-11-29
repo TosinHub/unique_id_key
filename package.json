@@ -1,6 +1,6 @@
 {
   "name": "unique-id-key",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "A module that returns random strings and API keys",
   "main": "server.js",
   "scripts": {
