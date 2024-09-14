@@ -1,54 +1,105 @@
+
+---
+
 # unique-id-key
-A module that returns unique random characters which could be all be numeric or all string or alpha numberic. It can also generate random API keys seperated by any special charater of your choice at every 4th character
 
+A TypeScript module for generating unique random strings. The module provides methods to create numeric, alphabetic, or alphanumeric strings, and it can generate random API keys separated by a special character after every 4th character.
 
-## HOW TO INSTALL
-# npm install unique-id-key --save
+## Installation
 
-var unique_id = require('unique-id-key')
+Install the package using npm:
 
-```javascript
+```bash
+npm install unique-id-key
+```
 
-## METHODS 
+Then, import the module in your project:
 
-#RandomString Method
-This method takes at least one parameter which is an integer value which specifies the length of the expected returned string and the second option which is to  indicate if the string should be in lowercase or uppercase. This returns only string values
+```typescript
+import unique_id from 'unique-id-key';
+```
 
-var any_randomString = unique_id.RandomString(10)
-console.log(any_random)
-//Returns erRogWyRtr
+## Methods
 
-var uppercase_randomString = unique_id.RandomString(8, "uppercase")
-console.log(uppercase_randomString)
-//Returns MNTVBSQW
+### `RandomString(length: number, caseType?: "uppercase" | "lowercase")`
+Generates a random alphabetic string. You can specify the length of the string and optionally define if it should be uppercase or lowercase. If `caseType` is not provided, the result will include both uppercase and lowercase characters.
 
+#### Parameters:
+- `length`: The length of the desired string (number).
+- `caseType` (optional): Specify `"uppercase"` for all uppercase letters or `"lowercase"` for all lowercase letters.
 
-var lowercase_randomString = unique_id.RandomString(11, "lowercase")
-console.log(lowercase_randomString)
-//Returns tqwicductda
+#### Example:
 
-#RandomNum Method
-This method takes only one parameter which is an integer value which specifies the length of the expected returned numeric random value.
+```typescript
+const any_randomString = unique_id.RandomString(10);
+console.log(any_randomString);
+// Example output: "erRogWyRtr"
 
-var random_numeric = unique_id.RandomNum(10)
-console.log(random_numeric)
+const uppercase_randomString = unique_id.RandomString(8, "uppercase");
+console.log(uppercase_randomString);
+// Example output: "MNTVBSQW"
 
-//Returns 4836593648
+const lowercase_randomString = unique_id.RandomString(11, "lowercase");
+console.log(lowercase_randomString);
+// Example output: "tqwicductda"
+```
 
-#RandomAlphaNum
-This method takes only one parameter which is an integer value which specifies the length of the expected alpha numeric string i.e the returns a random value that contains integers and strings(lowercase and upperercase)
+### `RandomNum(length: number)`
+Generates a random numeric string with the specified length.
 
-var random_alphanum = unique_id.RandomAlphaNum(10)
-console.log(random_alphanum)
-#Returns gp2WfI7ihd
+#### Parameters:
+- `length`: The length of the numeric string (number).
 
-#APIKEY
-This method takes at least two parameters, an integer value which specifies the length of the expected api key.It takes a second parameter which is the special character you want in the API.This is placed after every 4th character in the API KEY string.
+#### Example:
 
-var api_keys= unique_id.APIKEY(16,"-")
-console.log(api_keys)
-#Returns 5TZS-JLG3-325O-1S5B
+```typescript
+const random_numeric = unique_id.RandomNum(10);
+console.log(random_numeric);
+// Example output: "4836593648"
+```
 
-var api_keys= unique_id.APIKEY(12,".")
-console.log(api_keys)
-#Returns 5hQw.tQ1l.yqgH
+### `RandomAlphaNum(length: number)`
+Generates a random alphanumeric string with both letters (uppercase and lowercase) and numbers.
+
+#### Parameters:
+- `length`: The length of the alphanumeric string (number).
+
+#### Example:
+
+```typescript
+const random_alphanum = unique_id.RandomAlphaNum(10);
+console.log(random_alphanum);
+// Example output: "gp2WfI7ihd"
+```
+
+### `APIKEY(length: number, separator: string)`
+Generates a random API key with a specified length, and inserts a separator after every 4th character.
+
+#### Parameters:
+- `length`: The total length of the API key (number).
+- `separator`: The character to insert after every 4th character (string).
+
+#### Example:
+
+```typescript
+const api_key_1 = unique_id.APIKEY(16, "-");
+console.log(api_key_1);
+// Example output: "5TZS-JLG3-325O-1S5B"
+
+const api_key_2 = unique_id.APIKEY(12, ".");
+console.log(api_key_2);
+// Example output: "5hQw.tQ1l.yqgH"
+```
+
+### `UUID()`
+Generates a random UUID (Universally Unique Identifier).
+
+#### Example:
+
+```typescript
+const uuid = unique_id.UUID();
+console.log(uuid);
+// Example output: "9f5b5672-9a34-4a6b-a52d-dcdfe1d33cb4"
+```
+
+---
