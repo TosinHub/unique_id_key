@@ -16,7 +16,7 @@ npm install unique-id-key
 Then, import the module in your project:
 
 ```typescript
-import unique_id from 'unique-id-key';
+import { RandomString, RandomNum, AlphaNum, APIKEY, UUID } from 'unique-id-key';
 ```
 
 ## Methods
@@ -31,15 +31,15 @@ Generates a random alphabetic string. You can specify the length of the string a
 #### Example:
 
 ```typescript
-const any_randomString = unique_id.RandomString(10);
+const any_randomString = RandomString(10);
 console.log(any_randomString);
 // Example output: "erRogWyRtr"
 
-const uppercase_randomString = unique_id.RandomString(8, "uppercase");
+const uppercase_randomString = RandomString(8, "uppercase");
 console.log(uppercase_randomString);
 // Example output: "MNTVBSQW"
 
-const lowercase_randomString = unique_id.RandomString(11, "lowercase");
+const lowercase_randomString = RandomString(11, "lowercase");
 console.log(lowercase_randomString);
 // Example output: "tqwicductda"
 ```
@@ -53,7 +53,7 @@ Generates a random numeric string with the specified length.
 #### Example:
 
 ```typescript
-const random_numeric = unique_id.RandomNum(10);
+const random_numeric = RandomNum(10);
 console.log(random_numeric);
 // Example output: "4836593648"
 ```
@@ -67,7 +67,7 @@ Generates a random alphanumeric string with both letters (uppercase and lowercas
 #### Example:
 
 ```typescript
-const random_alphanum = unique_id.RandomAlphaNum(10);
+const random_alphanum = RandomAlphaNum(10);
 console.log(random_alphanum);
 // Example output: "gp2WfI7ihd"
 ```
@@ -82,11 +82,11 @@ Generates a random API key with a specified length, and inserts a separator afte
 #### Example:
 
 ```typescript
-const api_key_1 = unique_id.APIKEY(16, "-");
+const api_key_1 = APIKEY(16, "-");
 console.log(api_key_1);
 // Example output: "5TZS-JLG3-325O-1S5B"
 
-const api_key_2 = unique_id.APIKEY(12, ".");
+const api_key_2 = APIKEY(12, ".");
 console.log(api_key_2);
 // Example output: "5hQw.tQ1l.yqgH"
 ```
@@ -97,7 +97,7 @@ Generates a random UUID (Universally Unique Identifier).
 #### Example:
 
 ```typescript
-const uuid = unique_id.UUID();
+const uuid = UUID();
 console.log(uuid);
 // Example output: "9f5b5672-9a34-4a6b-a52d-dcdfe1d33cb4"
 ```

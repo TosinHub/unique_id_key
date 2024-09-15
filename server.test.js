@@ -1,4 +1,4 @@
-import { RandomString, RandomNum, AlphaNum, APIKEY, UUID } from "./server";
+import { RandomString, RandomNum, AlphaNum, APIKEY, UUID } from "./server.js";
 
 describe("RandomString", () => {
   it("generates a string of correct length", () => {

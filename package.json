@@ -1,10 +1,10 @@
 {
   "name": "unique-id-key",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "description": "A module that returns random strings and API keys",
   "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "api key",
     "api"
   ],
-  "author": "Oluwatosin Gbenga",
+  "author": "Tosin Hub",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TosinHub/unique_id_key/issues"
@@ -32,5 +32,6 @@
     "@types/jest": "^29.5.13",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5"
-  }
+  },
+  "type": "module"
 }
